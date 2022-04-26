@@ -17,7 +17,5 @@
     "react-redux": "^8.0.1"
   },
   "devDependencies": {
-    "eslint": "8.14.0",
-    "eslint-config-next": "12.1.5"
   }
 }
