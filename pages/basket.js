@@ -27,7 +27,7 @@ export default function basket() {
 
   return (
     <div>
-        <ML title={'hello'} />
+        <ML title={'hello2'} />
         <div className='container'>
     
         <Modal/>

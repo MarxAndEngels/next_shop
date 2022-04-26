@@ -54,9 +54,9 @@ export default function Home() {
    <div>
         <div className={stateMinCart==true? 'basket-min active': 'basket-min'}>
           <center>
-            <button onClick={wentBasket} className='btn btn-primary mb-2'><i class="fa fa-shopping-basket" aria-hidden="true"></i> Перейти в корзину</button>
+            <button onClick={wentBasket} className='btn btn-primary mb-2'><i className="fa fa-shopping-basket" aria-hidden="true"></i> Перейти в корзину</button>
           <br/>
-          <button onClick={closeMinBasket} className='btn btn-danger mb-4'><i class="fa fa-trash" aria-hidden="true"></i> Закрыть окно</button>
+          <button onClick={closeMinBasket} className='btn btn-danger mb-4'><i className="fa fa-trash" aria-hidden="true"></i> Закрыть окно</button>
           </center> 
           <div className='row'>
         {products?.map((el,i)=>{

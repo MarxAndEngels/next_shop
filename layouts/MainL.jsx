@@ -26,40 +26,40 @@ export default function MainL({children , title})  {
       
 
 
-        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-      <div class="container">
+        <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
+      <div className="container">
       <Link href="/">
-      <a class="navbar-brand" href="#">Shop.com</a>
+      <a className="navbar-brand" href="#">Shop.com</a>
       </Link>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
       </button>
     
-      <div class="collapse navbar-collapse" id="navbarScroll">
-        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
-          <li class="nav-item">
+      <div className="collapse navbar-collapse" id="navbarScroll">
+        <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+          <li className="nav-item">
           <Link href="/">
-            <a class="nav-link" aria-current="page" href="#">Home</a>
+            <a className="nav-link" aria-current="page" href="#">Home</a>
             </Link>
           </li>
           <Link href="/basket">
-            <a class="nav-link" href="#">Basket</a>
+            <a className="nav-link" href="#">Basket</a>
             </Link>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <li className="nav-item dropdown">
+            <a className="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               DropDown
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
+            <ul className="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a className="dropdown-item" href="#">Action</a></li>
+              <li><a className="dropdown-item" href="#">Another action</a></li>
               <li></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a className="dropdown-item" href="#">Something else here</a></li>
             </ul>
           </li>
         </ul>
-        <form class="d-flex">
+        <form className="d-flex">
         <Link href="/basket">
-          <button class="btn btn-outline-success" type="submit"><i class="fa fa-shopping-basket" aria-hidden="true"></i> Корзина {param}</button>
+          <button className="btn btn-outline-success" type="submit"><i className="fa fa-shopping-basket" aria-hidden="true"></i> Корзина {param}</button>
           </Link>
         </form>
     </div>

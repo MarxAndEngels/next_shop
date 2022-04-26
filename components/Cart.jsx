@@ -15,11 +15,11 @@ export default function Cart(props) {
       }
   return (
     <div className='col-lg-4 mt-3'>
-           <div class="card">
-      <img src={props.cart.image} class="card-img-top image-main" alt={props.cart.name}/>
-      <div class="card-body" style={{'text-align': 'center'}}>
-        <h5 class="card-title">{props.cart.name}</h5>
-        <p class="card-text">{props.cart.cost} руб.</p>
+           <div className="card">
+      <img src={props.cart.image} className="card-img-top image-main" alt={props.cart.name}/>
+      <div className="card-body" style={{'textAlign': 'center'}}>
+        <h5 className="card-title">{props.cart.name}</h5>
+        <p className="card-text">{props.cart.cost} руб.</p>
     
          <button onClick={()=> {addCount(props.cart.id) }} className='btn btn-primary'>Купить</button>
 
