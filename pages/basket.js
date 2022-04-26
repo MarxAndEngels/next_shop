@@ -21,9 +21,29 @@ export default function basket() {
 
     let [products,setProducts] = React.useState(null);
 
+    let [fullCost,setFullCost] = React.useState(0);
+
     React.useEffect(()=>{
       setProducts(data);
     },[]);
+
+
+    React.useEffect(()=>{
+      let sum = 0;
+      {products?.map((el,i)=>{
+        if(arr.hasOwnProperty(el.id)){
+          sum += el.cost*arr[el.id];
+            return true; 
+        }else{
+            return false;
+        }
+    })}
+    setFullCost(sum);
+
+    });
+
+
+    
 
   return (
     <div>
@@ -31,6 +51,7 @@ export default function basket() {
         <div className='container'>
     
         <Modal/>
+        <center> <p style={{'fontSize':'20px'}} className='mt-3'>Общая сумма заказа:  <b>{fullCost} руб.</b> </p> </center>
         <div className='row'>
         {products?.map((el,i)=>{
             if(arr.hasOwnProperty(el.id)){

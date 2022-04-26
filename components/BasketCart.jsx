@@ -20,7 +20,7 @@ export default function Cart(props) {
       <img src={props.cart.image} className="card-img-top image-main" alt={props.cart.name}/>
       <div className="card-body" style={{'textAlign': 'center'}}>
         <h5 className="card-title">{props.cart.name}</h5>
-        <p className="card-text" >{props.cart.cost} руб.</p>
+        <p className="card-text" >{props.cart.cost*props.count} руб.</p>
          <button onClick={()=> {addCount(props.cart.id) }} className='btn btn-success' style={{'marginRight': '15px'}}>+</button>
          <span >{props.count}</span>
          <button onClick={()=> {delCount(props.cart.id) }} className='btn btn-danger' style={{'marginLeft': '15px'}}>-</button>

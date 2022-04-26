@@ -21,7 +21,9 @@ export default function Home() {
     setProducts(data);
   },[]);
 
-  let [stateMinCart, setStateMinCart] = React.useState(false)
+  let [stateMinCart, setStateMinCart] = React.useState(false);
+
+  let [fullCost,setFullCost] = React.useState(0);
 
   let findButton = (e)=>{
      if(e.target.tagName == 'BUTTON'){
@@ -31,6 +33,20 @@ export default function Home() {
   let closeMinBasket = ()=>{
     setStateMinCart(false);
   }
+
+  React.useEffect(()=>{
+    let sum = 0;
+    {products?.map((el,i)=>{
+      if(arr.hasOwnProperty(el.id)){
+        sum += el.cost*arr[el.id];
+          return true; 
+      }else{
+          return false;
+      }
+  })}
+  setFullCost(sum);
+
+  });
 
   const router = useRouter()
   let wentBasket = () =>{
@@ -53,7 +69,10 @@ export default function Home() {
    {/* мини-корзина */}
    <div>
         <div className={stateMinCart==true? 'basket-min active': 'basket-min'}>
+
+
           <center>
+          <p style={{'fontSize':'20px'}} className='mt-3'>Общая сумма заказа:  <b>{fullCost} руб.</b> </p> 
             <button onClick={wentBasket} className='btn btn-primary mb-2'><i className="fa fa-shopping-basket" aria-hidden="true"></i> Перейти в корзину</button>
           <br/>
           <button onClick={closeMinBasket} className='btn btn-danger mb-4'><i className="fa fa-trash" aria-hidden="true"></i> Закрыть окно</button>
@@ -85,13 +104,13 @@ export default function Home() {
         right: 0;
           width: 100%;
           max-width: 320px;
-          height: 380px;
+          height: 440px;
           overflow: auto;
           font-size: 16px;
           background-color:#212529;
           border-radius: 30px;
           color: snow;
-          padding:20px 40px;
+          padding:2px 40px;
           display: none;
         }
         .basket-min.active{
